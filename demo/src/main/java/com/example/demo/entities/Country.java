@@ -9,10 +9,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import lombok.AllArgsConstructor;
+import jakarta.persistence.Table;
 import lombok.*;
 
 @Entity
+@Table(name = "countries")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

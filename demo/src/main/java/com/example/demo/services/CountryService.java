@@ -23,7 +23,7 @@ public class CountryService {
     private CountryStatRepository countryStatRepository;
 
     public List<Country> getAllCountries() {
-        return countryRepository.findAll();
+        return countryRepository.findAllCountries();
     }
 
     public List<Language> getLanguagesByCountryId(int countryId) {

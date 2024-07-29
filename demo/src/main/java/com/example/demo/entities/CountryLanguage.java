@@ -5,9 +5,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.MapsId;
+import jakarta.persistence.Table;
 import lombok.*;
 
 @Entity
+@Table(name = "country_languages")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
