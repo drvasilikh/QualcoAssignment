@@ -1,0 +1,6 @@
+<h1>Country List</h1>
+<ul>
+  <li *ngFor="let country of countries" (click)="onCountryClick(country.id)">
+    {{ country.name }} - {{ country.area }} - {{ country.countryCode2 }} - {{country.id}}
+  </li>
+</ul>

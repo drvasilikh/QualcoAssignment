@@ -1,0 +1,21 @@
+<h1>Country Stats</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Country Code</th>
+      <th>Year</th>
+      <th>Population</th>
+      <th>GDP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let stat of stats">
+      <td>{{ stat.name }}</td>
+      <td>{{ stat.countryCode3 }}</td>
+      <td>{{ stat.year }}</td>
+      <td>{{ stat.population }}</td>
+      <td>{{ stat.gdp }}</td>
+    </tr>
+  </tbody>
+</table>
