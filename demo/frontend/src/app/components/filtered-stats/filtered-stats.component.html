@@ -1,38 +1,45 @@
-<h1>Filtered Stats</h1>
-<form [formGroup]="form" (ngSubmit)="onFilter()">
-  <label for="region">Region:</label>
-  <select formControlName="region" id="region">
-    <option *ngFor="let region of regions" [value]="region.id">{{ region.name }}</option>
-  </select>
-
-  <label for="dateFrom">Date From:</label>
-  <input type="date" formControlName="dateFrom" id="dateFrom" />
-
-  <label for="dateTo">Date To:</label>
-  <input type="date" formControlName="dateTo" id="dateTo" />
-
-  <button type="submit">Filter</button>
-</form>
-
-<table>
-  <thead>
-    <tr>
-      <th>Continent</th>
-      <th>Region</th>
-      <th>Country</th>
-      <th>Year</th>
-      <th>Population</th>
-      <th>GDP</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let stat of stats">
-      <td>{{ stat.continent }}</td>
-      <td>{{ stat.region }}</td>
-      <td>{{ stat.country }}</td>
-      <td>{{ stat.year }}</td>
-      <td>{{ stat.population }}</td>
-      <td>{{ stat.gdp }}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="container mt-5">
+    <h2>Filtered Stats</h2>
+    <form [formGroup]="form" (ngSubmit)="onFilter()" class="mb-3">
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="region">Region</label>
+          <select id="region" formControlName="region" class="form-control">
+            <option *ngFor="let region of regions" [value]="region.name">{{ region.name }}</option>
+          </select>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="dateFrom">Date From</label>
+          <input type="date" id="dateFrom" formControlName="dateFrom" class="form-control">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="dateTo">Date To</label>
+          <input type="date" id="dateTo" formControlName="dateTo" class="form-control">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Filter</button>
+    </form>
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Continent Name</th>
+          <th scope="col">Region Name</th>
+          <th scope="col">Country Name</th>
+          <th scope="col">Year</th>
+          <th scope="col">Population</th>
+          <th scope="col">GDP</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let stat of stats">
+          <td>{{ stat.continentName }}</td>
+          <td>{{ stat.regionName }}</td>
+          <td>{{ stat.countryName }}</td>
+          <td>{{ stat.year }}</td>
+          <td>{{ stat.population }}</td>
+          <td>{{ stat.gdp }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

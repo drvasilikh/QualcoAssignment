@@ -1,6 +1,9 @@
-<h1>Country Languages</h1>
-<ul>
-  <li *ngFor="let language of languages">
-    {{ language.language }}
-  </li>
-</ul>
+<div class="container mt-5">
+    <h2>Languages Spoken in Country</h2>
+    <ul class="list-group">
+      <li *ngFor="let language of languages" class="list-group-item">
+        {{ language.language }}
+      </li>
+    </ul>
+  </div>
+  
