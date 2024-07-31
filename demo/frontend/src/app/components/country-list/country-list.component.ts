@@ -22,7 +22,6 @@ export class CountryListComponent implements OnInit {
   }
 
   onCountryClick(countryId: number) {
-    console.log(countryId)
     this.router.navigate(['/countries', countryId, 'languages']);
   }
 }

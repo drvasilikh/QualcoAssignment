@@ -11,11 +11,11 @@
   </thead>
   <tbody>
     <tr *ngFor="let stat of stats">
-      <td>{{ stat.name }}</td>
-      <td>{{ stat.countryCode3 }}</td>
-      <td>{{ stat.year }}</td>
-      <td>{{ stat.population }}</td>
-      <td>{{ stat.gdp }}</td>
+      <td>{{ stat[0] }}</td>
+      <td>{{ stat[1] }}</td>
+      <td>{{ stat[2] }}</td>
+      <td>{{ stat[3] }}</td>
+      <td>{{ stat[4] }}</td>
     </tr>
   </tbody>
 </table>

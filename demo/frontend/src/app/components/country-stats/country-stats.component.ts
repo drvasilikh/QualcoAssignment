@@ -17,6 +17,7 @@ export class CountryStatsComponent implements OnInit {
 
   ngOnInit(): void {
     this.countryService.getMaxGdpPerPopulation().subscribe((data) => {
+      console.log(data);
       this.stats = data;
     });
   }
