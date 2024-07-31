@@ -23,7 +23,6 @@ public class DatabaseTestRunner implements CommandLineRunner {
             System.out.println("No countries found.");
         } else {
             System.out.println("Countries found: " + countries.size());
-            countries.forEach(country -> System.out.println(country.getName()));
         }
     }
 }

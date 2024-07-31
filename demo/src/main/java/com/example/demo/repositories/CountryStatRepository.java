@@ -16,4 +16,11 @@ public interface CountryStatRepository extends JpaRepository<CountryStat, Countr
         "FROM CountryStat cs2 WHERE cs2.country = cs.country)")
     List<Object[]> findMaxGdpPerPopulation();
 
+    @Query("SELECT c.name, r.name, co.name, cs.id.year, cs.population, cs.gdp " +
+           "FROM CountryStat cs " +
+           "JOIN cs.country co " +
+           "JOIN co.region r " +
+           "JOIN r.continent c " +
+           "WHERE r.name = :region AND cs.id.year BETWEEN :dateFrom AND :dateTo")
+    List<Object[]> findFilteredStats(String region, int dateFrom, int dateTo);
 }
